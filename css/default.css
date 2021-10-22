@@ -102,10 +102,11 @@ main {
     margin: 15px;
     padding: 15px 15px 15px 25px;
     box-shadow: 2px 2px 3px #ccc;
+    cursor: pointer;
 }
 
 #fonctionnement ul>li:hover {
-    background-color: #f5edff;
+    background-color: #F5EDFF;
 }
 
 #fonctionnement .puce {
@@ -128,7 +129,7 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
-    background-color: #F2F2F2;
+    background-color: #F6F6F6;
     padding: 20px;
 }
 
@@ -142,6 +143,9 @@ main {
     border-radius: 20px;
     background-color: #FFF;
     box-shadow: 0px 0px 5px #ccc;
+}
+.carte-restaurant:hover {
+    background-color: #F5EDFF;
 }
 
 .carte-restaurant .photos-carte {
