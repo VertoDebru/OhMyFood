@@ -193,6 +193,7 @@ main {
 
 .content-carte .description {
     width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 footer {
