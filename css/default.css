@@ -108,6 +108,9 @@ main {
 #fonctionnement ul>li:hover {
     background-color: #F5EDFF;
 }
+#fonctionnement ul>li:hover i {
+    color: #9356DC;
+}
 
 #fonctionnement .puce {
     position: absolute;
