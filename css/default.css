@@ -76,6 +76,12 @@ header img {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
     box-shadow: 2px 2px 3px #ccc;
+    cursor: pointer;
+}
+
+.explore button:hover {
+    filter: brightness(1.1);
+    box-shadow: 2px 2px 3px #A5A5A5;
 }
 
 main {
