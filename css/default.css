@@ -1,3 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
 body {
     margin: 0;
+    color: black;
+}
+
+h1,
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+i {
+    padding-right: 10px;
+}
+
+input[type="search"] {
+    border: 0;
+    padding: 10px;
+    background-color: #eaeaea;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    padding: 10px;
+}
+
+.position {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeaea;
+    padding: 10px;
+    box-shadow: inset 1px 3px 2px 0px #ccc;
+}
+
+.explore {
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+.explore button {
+    padding: 15px;
+    border: 0;
+    border-radius: 25px;
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 2px 3px #ccc;
+}
+
+main {
+    margin: 0;
+}
+
+#fonctionnement {
+    margin: 0 auto;
+    width: 90vw;
+    padding: 20px;
+}
+
+#fonctionnement ul {
+    padding-inline-start: 0;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+#fonctionnement ul>li {
+    position: relative;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px 15px 15px 25px;
+    box-shadow: 2px 2px 3px #ccc;
+}
+
+#fonctionnement ul>li:hover {
+    background-color: #f5edff;
+}
+
+#fonctionnement .puce {
+    position: absolute;
+    left: -15px;
+    top: 11px;
+    width: 15px;
+    text-align: center;
+    color: #FFF;
+    font-weight: normal;
+    padding: 5px;
+    background-color: #9356DC;
+    font-size: 0.8em;
+    border-radius: 20px;
+}
+
+#restaurants {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    padding: 20px;
+}
+
+#restaurants h1 {
+    flex: 1 1 100%;
+}
+
+.carte-restaurant {
+    margin: 15px;
+    width: 20vw;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.carte-restaurant .photos-carte {
+    position: relative;
+    width: auto;
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
+}
+
+.carte-restaurant:nth-child(2) .photos-carte {
+    background-image: url(../images/restaurants/carte/la_palette_du_gout.jpg);
+}
+
+.carte-restaurant:nth-child(3) .photos-carte {
+    background-image: url(../images/restaurants/carte/la_note_enchantee.jpg);
+}
+
+.carte-restaurant:nth-child(4) .photos-carte {
+    background-image: url(../images/restaurants/carte/a_la_francaise.jpg);
+}
+
+.carte-restaurant:nth-child(5) .photos-carte {
+    background-image: url(../images/restaurants/carte/le_delice_des_sens.jpg);
+}
+
+.photos-carte .new {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #1c987a;
+    background-color: #99e2d0;
+    border-radius: 5px;
+}
+
+.carte-restaurant .content-carte {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.content-carte .description {
+    width: -webkit-fill-available;
+}
+
+footer {
+    padding: 20px;
+    background-color: #353535;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+}
+
+footer ul {
+    list-style-type: none;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FF79DA;
+}
+
+/* STYLE */
+.icon_large {
+    font-size: 1.5em;
+}
+
+.small {
+    font-size: small;
+}
+
+.gray {
+    color: #999;
+}
+
+.purple {
+    color: #9356DC;
+}
+
+@media screen and (min-width:280px) and (max-width:420px) {
+    #restaurants {
+        display: block;
+    }
+
+    .carte-restaurant {
+        width: auto;
+    }
 }
