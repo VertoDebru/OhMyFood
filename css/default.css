@@ -157,19 +157,19 @@ main {
 }
 
 .carte-restaurant:nth-child(2) .photos-carte {
-    background-image: url(../images/restaurants/carte/la_palette_du_gout.jpg);
+    background-image: url(../images/restaurants/carte/la-palette-du-gout.jpg);
 }
 
 .carte-restaurant:nth-child(3) .photos-carte {
-    background-image: url(../images/restaurants/carte/la_note_enchantee.jpg);
+    background-image: url(../images/restaurants/carte/la-note-enchantee.jpg);
 }
 
 .carte-restaurant:nth-child(4) .photos-carte {
-    background-image: url(../images/restaurants/carte/a_la_francaise.jpg);
+    background-image: url(../images/restaurants/carte/a-la-francaise.jpg);
 }
 
 .carte-restaurant:nth-child(5) .photos-carte {
-    background-image: url(../images/restaurants/carte/le_delice_des_sens.jpg);
+    background-image: url(../images/restaurants/carte/le-delice-des-sens.jpg);
 }
 
 .photos-carte .new {
