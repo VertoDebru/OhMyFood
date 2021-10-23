@@ -37,6 +37,10 @@ i {
     padding-right: 10px;
 }
 
+label {
+    cursor: pointer;
+}
+
 input[type="search"] {
     border: 0;
     padding: 10px;
@@ -202,6 +206,7 @@ main {
 .carte-restaurant .content-carte {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -235,6 +240,27 @@ footer a {
 
 footer a:hover {
     color: #FF79DA;
+}
+
+.fa-heart::before {
+    content: "\f004";
+    transform: scale(0, 1);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 150ms;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked + .fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    background: linear-gradient(#9356DC,#FF79DA);
+    background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* STYLE */
