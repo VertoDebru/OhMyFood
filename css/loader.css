@@ -1,0 +1,54 @@
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1500;
+    background-color: #F2F2F2;
+    color: #000;
+
+    animation: hide-loader 1s linear 4s;
+    animation-fill-mode: forwards;
+}
+.loader-content {
+    position: relative;
+    top: 45vh;
+    width: 100vw;
+    text-align: center;
+}
+
+.loader-point {
+    margin: 0 auto;
+
+    font-family: 'Shrikhand', cursive;
+    font-size: 2em;
+    color: var(--violet);
+    text-align: center;
+}
+.loader-point::before {
+    content: "ohmyfood";
+
+    animation: write 3s cubic-bezier(0.8, 1, 0.9, 2);
+    animation-fill-mode: forwards;
+}
+
+@keyframes write {
+    0% {
+        color: var(--violet);
+        opacity: 1;
+    }
+    12.5% { color: var(--pink); }
+    25% { opacity: 0; }
+    37.5% { color: var(--violet); }
+    50% { opacity: 1; }
+    62.5% { color: var(--pink); }
+    75% { opacity: 0; }
+    87.5% { color: var(--violet); opacity: 0.8;}
+    100% { color: #000; opacity: 1; }
+}
+@keyframes hide-loader {
+    0% { opacity: 1; }
+    99% { opacity: 0; }
+    100% { visibility: hidden; }
+}

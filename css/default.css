@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import 'loader.css';
+
+/* Colors */
+:root {
+    --violet: #9356DC;
+    --pink: #FF79DA;
+    --green: #99E2D0;
+
+    --gradient: linear-gradient(var(--violet),var(--pink));
+}
 
 body {
     margin: 0;
@@ -41,7 +51,7 @@ label {
     cursor: pointer;
 }
 
-input[type="search"] {
+input[type=search] {
     border: 0;
     padding: 10px;
     background-color: #eaeaea;
@@ -65,6 +75,22 @@ header img {
     box-shadow: inset 1px 3px 2px 0px #ccc;
 }
 
+button {
+    padding: 15px 45px;
+    border: 0;
+    border-radius: 25px;
+    background: linear-gradient(var(--pink), var(--violet));
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 2px 2px 3px #ccc;
+    cursor: pointer;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    box-shadow: 2px 2px 3px #A5A5A5;
+}
+
 .explore {
     margin: 0 auto;
     padding: 30px;
@@ -72,20 +98,9 @@ header img {
     text-align: center;
 }
 
-.explore button {
-    padding: 15px;
-    border: 0;
-    border-radius: 25px;
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: #FFF;
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 2px 2px 3px #ccc;
-    cursor: pointer;
-}
-
-.explore button:hover {
-    filter: brightness(1.1);
-    box-shadow: 2px 2px 3px #A5A5A5;
+.logo {
+    font-family: 'Shrikhand', sans-serif;
+    font-size: 2em;
 }
 
 main {
@@ -119,7 +134,7 @@ main {
     background-color: #F5EDFF;
 }
 #fonctionnement ul>li:hover i {
-    color: #9356DC;
+    color: var(--violet);
 }
 
 #fonctionnement .puce {
@@ -131,7 +146,7 @@ main {
     color: #FFF;
     font-weight: normal;
     padding: 5px;
-    background-color: #9356DC;
+    background-color: var(--violet);
     font-size: 0.8em;
     border-radius: 20px;
 }
@@ -198,7 +213,7 @@ main {
     font-size: 0.8em;
     font-weight: bold;
     color: #1c987a;
-    background-color: #99e2d0;
+    background-color: var(--green);
     border-radius: 5px;
 }
 
@@ -238,7 +253,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #FF79DA;
+    color: var(--pink);
 }
 
 .fa-heart::before {
@@ -254,12 +269,28 @@ input[type=checkbox] {
 }
 
 input[type=checkbox]:checked + .fa-heart::before {
+    display: none;
+}
+input[type=checkbox]:checked + .fa-heart::after {
     content: "\f004";
     font-weight: bold;
-    background: linear-gradient(#9356DC,#FF79DA);
+    background: var(--gradient);
     background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+
+    animation: show-heart 0s forwards;
+}
+input[type=checkbox]:not(:checked) + .fa-heart::after {
+    animation: show-heart .5s reverse;
+}
+
+@keyframes show-heart {
+    0% { font-size: 0em; opacity: 0; }
+    25% { font-size: 0.25em; opacity: 0.25; }
+    50% { font-size: 0.5em; opacity: 0.50; }
+    75% { font-size: 0.75em; opacity: 0.75; }
+    100% { font-size: 1em; opacity: 1; }
 }
 
 /* STYLE */
@@ -276,7 +307,7 @@ input[type=checkbox]:checked + .fa-heart::before {
 }
 
 .purple {
-    color: #9356DC;
+    color: var(--violet);
 }
 
 @media screen and (min-width:280px) and (max-width:420px) {
