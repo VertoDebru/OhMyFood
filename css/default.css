@@ -309,41 +309,44 @@ footer a:hover {
     color: var(--pink);
 }
 
-.fa-heart::before {
-    content: "\f004";
-    transform: scale(0, 1);
-    transition-property: transform;
-    transition-duration: 1s;
-    transition-delay: 150ms;
-}
-
 input[type=checkbox] {
     display: none;
 }
 
 input[type=checkbox]:checked + .fa-heart::before {
-    display: none;
+    content: "\f004";
+    position: relative;
+    z-index: 1;
 }
+
 input[type=checkbox]:checked + .fa-heart::after {
     content: "\f004";
+    position: absolute;
+    right: 30px;
+    z-index: 0;
+    font-size: 1em;
     font-weight: bold;
-    background: var(--gradient);
+    background: left bottom 0% / 100% 0% no-repeat var(--gradient);
     background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
-    animation: show-heart 0s forwards;
-}
-input[type=checkbox]:not(:checked) + .fa-heart::after {
-    animation: show-heart .5s reverse;
+    animation: show-heart 1s forwards;
 }
 
 @keyframes show-heart {
-    0% { font-size: 0em; opacity: 0; }
-    25% { font-size: 0.25em; opacity: 0.25; }
-    50% { font-size: 0.5em; opacity: 0.50; }
-    75% { font-size: 0.75em; opacity: 0.75; }
-    100% { font-size: 1em; opacity: 1; }
+    0% {
+        background: left bottom 0% / 100% 0% no-repeat var(--gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        background: left bottom 0% / 100% 100% no-repeat var(--gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 /* STYLE */
