@@ -59,11 +59,6 @@ span {
     padding-left: 15px;
 }
 
-i {
-    width: 15px;
-    text-align: center;
-}
-
 label {
     cursor: pointer;
 }
@@ -87,8 +82,6 @@ header img {
 
 .position {
     height: 45px;
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
     background-color: #eaeaea;
     padding: 5px 0 0 0;
     box-shadow: inset 1px 3px 2px 0px #ccc;
@@ -112,15 +105,10 @@ button:hover {
 }
 
 .explore {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     padding: 40px 30px 55px 30px;
     max-height: 285px;
     background-color: #F2F2F2;
-    text-align: center;
 }
 
 .explore h2 {
@@ -143,8 +131,17 @@ main {
 }
 
 #fonctionnement {
-    margin: 0 auto;
-    padding: 20px;
+    padding: 0 15px 40px 15px;
+}
+
+#fonctionnement h2 {
+    padding-block-start: 2.1em;
+    padding-block-end: 0.9em;
+}
+
+#fonctionnement i {
+    width: 15px;
+    text-align: center;
 }
 
 #fonctionnement ul {
@@ -194,12 +191,15 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
+    padding: 0 15px;
     background-color: #F6F6F6;
-    padding: 20px;
 }
 
 #restaurants h2 {
     flex: 1 1 100%;
+    margin-inline-start: 15px;
+    padding-block-start: 2.1em;
+    padding-block-end: 0.4em;
 }
 
 .carte-restaurant {
@@ -245,10 +245,10 @@ main {
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 8px;
+    padding: 8px 15px;
     font-family: 'Roboto', sans-serif;
     font-size: 0.8em;
-    font-weight: bold;
+    font-weight: 500;
     color: #1c987a;
     background-color: var(--green);
     border-radius: 5px;
@@ -256,17 +256,20 @@ main {
 
 .carte-restaurant .content-carte {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    padding: 15px 10px 10px 10px;
+    align-items: flex-start;
 }
 
 .content-carte .description {
     width: -webkit-fill-available;
     width: -moz-available;
 }
+.content-carte .coeur {
+    padding-right: 5px;
+}
 
 footer {
+    margin-top: 50px;
     padding: 20px;
     background-color: #353535;
     color: #FFF;
@@ -276,7 +279,15 @@ footer {
 
 footer h2 {
     font-family: 'Shrikhand', sans-serif;
+    font-size: 1.3em;
     font-weight: lighter;
+}
+
+footer i {
+    width: 25px;
+}
+footer span {
+    padding-left: 0px;
 }
 
 footer ul {
@@ -352,9 +363,10 @@ input[type=checkbox]:not(:checked) + .fa-heart::after {
     color: var(--violet);
 }
 
-@media screen and (min-width:280px) and (max-width:420px) {
+@media screen and (min-width:280px) and (max-width:768px) {
     #restaurants {
         display: block;
+        padding: 0;
     }
 
     .carte-restaurant {
