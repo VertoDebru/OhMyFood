@@ -16,20 +16,28 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     margin-block-start: 0;
     margin-block-end: 0
 }
 
 h1 {
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Shrikhand', sans-serif;
     font-weight: lighter;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 900;
 }
 
 p {
@@ -161,7 +169,7 @@ main {
     padding: 20px;
 }
 
-#restaurants h1 {
+#restaurants h2 {
     flex: 1 1 100%;
 }
 
@@ -235,6 +243,11 @@ footer {
     color: #FFF;
     font-family: 'Roboto', sans-serif;
     font-size: 0.9em;
+}
+
+footer h2 {
+    font-family: 'Shrikhand', sans-serif;
+    font-weight: lighter;
 }
 
 footer ul {
