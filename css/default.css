@@ -19,6 +19,7 @@ h1 {
     margin-block-start: 0.3em;
     margin-block-end: 0.3em;
 }
+
 h2,
 h3,
 h4 {
@@ -167,6 +168,7 @@ main {
 #fonctionnement ul>li:hover {
     background-color: #F5EDFF;
 }
+
 #fonctionnement ul>li:hover i {
     color: var(--violet);
 }
@@ -209,6 +211,7 @@ main {
     background-color: #FFF;
     box-shadow: 0px 0px 5px #ccc;
 }
+
 .carte-restaurant:hover {
     background-color: #F5EDFF;
 }
@@ -256,8 +259,9 @@ main {
 
 .carte-restaurant .content-carte {
     display: flex;
-    padding: 15px 10px 10px 10px;
     align-items: flex-start;
+    position: relative;
+    padding: 15px 10px 10px 10px;
 }
 
 .content-carte .description {
@@ -286,6 +290,7 @@ footer h2 {
 footer i {
     width: 25px;
 }
+
 footer span {
     padding-left: 0px;
 }
@@ -322,7 +327,7 @@ input[type=checkbox]:checked + .fa-heart::before {
 input[type=checkbox]:checked + .fa-heart::after {
     content: "\f004";
     position: absolute;
-    right: 30px;
+    right: 15px;
     z-index: 0;
     font-size: 1em;
     font-weight: bold;
