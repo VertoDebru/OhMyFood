@@ -12,41 +12,58 @@
     animation-fill-mode: forwards;
 }
 .loader-content {
+    display: flex;
     position: relative;
     top: 45vh;
+    margin: 0 auto;
     width: 100vw;
+    max-width: 280px;
     text-align: center;
 }
 
 .loader-point {
     margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
 
-    font-family: 'Shrikhand', cursive;
-    font-size: 2em;
-    color: var(--violet);
-    text-align: center;
+    animation: updown 1.5s infinite;
 }
-.loader-point::before {
-    content: "ohmyfood";
-
-    animation: write 3s cubic-bezier(0.8, 1, 0.9, 2);
-    animation-fill-mode: forwards;
+.loader-content .loader-point:nth-child(1) {
+    background-color: var(--green);
+    animation-delay: 0s;
 }
-
-@keyframes write {
+.loader-content .loader-point:nth-child(2) {
+    background-color: var(--pink);
+    animation-delay: 0.2s;
+}
+.loader-content .loader-point:nth-child(3) {
+    background-color: var(--violet);
+    animation-delay: 0.4s;
+}
+@keyframes updown {
     0% {
-        color: var(--violet);
+        transform: scale(1)/* translateY(0px)*/;
         opacity: 1;
     }
-    12.5% { color: var(--pink); }
-    25% { opacity: 0; }
-    37.5% { color: var(--violet); }
-    50% { opacity: 1; }
-    62.5% { color: var(--pink); }
-    75% { opacity: 0; }
-    87.5% { color: var(--violet); opacity: 0.8;}
-    100% { color: #000; opacity: 1; }
+    25% {
+        transform: scale(1.1)/* translateY(-25px)*/;
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1)/* translateY(0px)*/;
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1.1)/* translateY(25px)*/;
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1)/* translateY(0px)*/;
+        opacity: 1;
+    }
 }
+
 @keyframes hide-loader {
     0% { opacity: 1; }
     99% { opacity: 0; }
