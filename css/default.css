@@ -12,6 +12,7 @@
 
 body {
     margin: 0;
+    min-height: 100vh;
     color: black;
 }
 
@@ -107,6 +108,7 @@ button:hover {
     margin: 0 auto;
     padding: 40px 30px 55px 30px;
     width: -webkit-fill-available;
+    width: -moz-available;
     max-height: 285px;
     background-color: #F2F2F2;
 }
@@ -206,7 +208,7 @@ main {
 
 .carte-restaurant {
     margin: 20px 15px 0px 15px;
-    width: 20vw;
+    width: 44vw;
     border-radius: 20px;
     background-color: #FFF;
     box-shadow: 0px 0px 5px #ccc;
@@ -367,7 +369,7 @@ footer a:hover {
     color: var(--violet);
 }
 
-@media screen and (min-width:280px) and (max-width:768px) {
+@media screen and (min-width:280px) and (max-width:874px) {
     #restaurants {
         display: block;
         padding: 0;
