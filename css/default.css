@@ -268,6 +268,7 @@ main {
     width: -webkit-fill-available;
     width: -moz-available;
 }
+
 .content-carte .coeur {
     padding-right: 5px;
 }
@@ -314,17 +315,12 @@ footer a:hover {
     color: var(--pink);
 }
 
-input[type=checkbox] {
-    display: none;
-}
-
-input[type=checkbox]:checked + .fa-heart::before {
-    content: "\f004";
+.fa-heart::before {
     position: relative;
     z-index: 1;
 }
 
-input[type=checkbox]:checked + .fa-heart::after {
+.fa-heart:hover::after {
     content: "\f004";
     position: absolute;
     right: 15px;
@@ -336,7 +332,7 @@ input[type=checkbox]:checked + .fa-heart::after {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
-    animation: show-heart 1s forwards;
+    animation: show-heart 0.5s forwards;
 }
 
 @keyframes show-heart {
