@@ -98,7 +98,7 @@ header .photos4 {
     border-radius: 30px 30px 0 0;
 }
 
-input[type=checkbox]:checked + .fa-heart::after {
+.fa-heart:hover::after {
     right: 35px;
 }
 

@@ -60,10 +60,6 @@ span {
     padding-left: 15px;
 }
 
-label {
-    cursor: pointer;
-}
-
 input[type=search] {
     border: 0;
     padding: 10px;
@@ -318,6 +314,7 @@ footer a:hover {
 .fa-heart::before {
     position: relative;
     z-index: 1;
+    cursor: pointer;
 }
 
 .fa-heart:hover::after {
