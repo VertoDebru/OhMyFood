@@ -70,6 +70,8 @@ input[type=search] {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
@@ -104,6 +106,7 @@ button:hover {
 .explore {
     margin: 0 auto;
     padding: 40px 30px 55px 30px;
+    width: -webkit-fill-available;
     max-height: 285px;
     background-color: #F2F2F2;
 }
@@ -190,6 +193,7 @@ main {
     flex-direction: row;
     margin: 0 auto;
     padding: 0 15px;
+    padding-bottom: 50px;
     background-color: #F6F6F6;
 }
 
@@ -201,7 +205,7 @@ main {
 }
 
 .carte-restaurant {
-    margin: 15px;
+    margin: 20px 15px 0px 15px;
     width: 20vw;
     border-radius: 20px;
     background-color: #FFF;
@@ -270,7 +274,6 @@ main {
 }
 
 footer {
-    margin-top: 50px;
     padding: 20px;
     background-color: #353535;
     color: #FFF;
