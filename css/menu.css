@@ -39,7 +39,10 @@ form {
 }
 
 button {
+    flex: 1 100%;
     margin: 40px 0;
+    padding: 15px 40px;
+    max-width: 155px;
 }
 
 p {

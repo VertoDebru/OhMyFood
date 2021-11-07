@@ -208,7 +208,7 @@ main {
 
 .carte-restaurant {
     margin: 20px 15px 0px 15px;
-    width: 44vw;
+    width: 21vw;
     border-radius: 20px;
     background-color: #FFF;
     box-shadow: 0px 0px 5px #ccc;
@@ -369,10 +369,17 @@ footer a:hover {
     color: var(--violet);
 }
 
-@media screen and (min-width:280px) and (max-width:874px) {
+@media screen and (min-width:890px) and (max-width:2900px) {
+    .carte-restaurant {
+        width: 44vw;
+        max-width: 350px;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:891px) {
     #restaurants {
         display: block;
-        padding: 0;
+        padding: 0px 0px 50px 0px;
     }
 
     .carte-restaurant {
