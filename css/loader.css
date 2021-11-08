@@ -23,8 +23,8 @@
 
 .loader-point {
     margin: 0 auto;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 25px;
 
     animation: updown 1.5s infinite;
